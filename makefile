@@ -25,4 +25,4 @@ utils.o:utils.c defs.h
 
 .PHONY:clean
 clean:
-	rm edit $(objects) 
+	-rm edit $(objects) 
