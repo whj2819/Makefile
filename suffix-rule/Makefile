@@ -2,7 +2,7 @@ PROGS = main
 
 all: ${PROGS}
 
-CLEANFILES = *.o *.out *.swap *.core *.tmp
+CLEANFILES = *.o *.out *.swap *.core *.tmp *.d
 SOURCES = main.c
 CPPFLAGS = -Wall -g
 CC = gcc
