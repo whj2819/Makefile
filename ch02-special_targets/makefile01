@@ -7,9 +7,9 @@ CLEANFILES = *.o *.out *.swap *.core *.tmp
 CC = gcc
 CPPFLAGS = -Wall -g
 
-depend: d.c
-	${CC} -M ${CPPFLAGS} $^ > $@
-include depend
+# .INTERMEDIATE: main.o
+# .SECONDARY: main.o
+#.PRECIOUS: main.o
 
 main: main.o
 d: d.o
