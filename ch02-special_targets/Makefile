@@ -8,7 +8,7 @@ CC = gcc
 CPPFLAGS = -Wall -g
 
 depend: d.c
-	${CC} -M ${CPPFLAGS} $^ > $@
+	${CC} -MM ${CPPFLAGS} $^ > $@
 include depend
 
 main: main.o
