@@ -1,6 +1,20 @@
-words:
-	@echo $(words "abc")
+#
+# $(sort list)
+#
+stdout := $(shell ls )
+sort:
+	@echo $(sort a x de f b)
+	 $(stdout)
 
+
+#
+# 中文版本有误应该为:
+# $(word N, TEXT)
+#
+words:
+	@echo $(words a b) 
+	@echo $(word 2, a b c)
+	@echo $(wordlist 2,5, a b c cat pig dog)
 
 
 #
@@ -39,12 +53,12 @@ find:
 # e.g:
 # $(filter pattern..., text)
 #
-words := he the hen other the%
-get-the:
-	@echo he matches : $(filter he, $(words))
-	@echo %he matches : $(filter %he, $(words))
-	@echo he% matches : $(filter he%, $(words))
-	@echo %he% matches : $(filter %he%, $(words))
+#words := he the hen other the%
+#get-the:
+#	@echo he matches : $(filter he, $(words))
+#	@echo %he matches : $(filter %he, $(words))
+#	@echo he% matches : $(filter he%, $(words))
+#	@echo %he% matches : $(filter %he%, $(words))
 
 
 #
