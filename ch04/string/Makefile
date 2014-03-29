@@ -1,3 +1,29 @@
+
+comma := ,
+echo-args = $(subst ' ','$(comma) ',\
+	$(foreach a, 1 2 3 4 5 6 7 8 9,'$($a)'))
+
+display:
+	@echo $(echo-args)
+	@echo $(MAKE)
+
+
+
+#
+# $(call var, para, para...)
+#
+reverse = $(2)$(1)
+foo = $(call reverse,1,2)
+
+call_foo:
+	@echo $(foo)
+
+names := a b c
+files := $(foreach n, $(names), '$(n).o')
+for_each:
+	@echo $(files)
+
+
 #
 # $(sort list)
 #
